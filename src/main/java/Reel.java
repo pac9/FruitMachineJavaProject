@@ -5,64 +5,65 @@ import java.util.Random;
 
 public class Reel {
 
-    private FruitType reelOneChoice;
-    private FruitType reelTwoChoice;
-    private FruitType reelThreeChoice;
-    private ArrayList<Enum> fruits;
-
-    public Reel(FruitType fruitType) {
-        this.reelOneChoice = reelOneChoice;
-        this.reelTwoChoice = reelTwoChoice;
-        this.reelThreeChoice = reelThreeChoice;
-        fruits = new ArrayList<>();
-
-//        generateReel();
-//        shuffle();
+//    private FruitType reelOneChoice;
+//    private FruitType reelTwoChoice;
+//    private FruitType reelThreeChoice;
+//    private ArrayList<Enum> fruits;
+//
+//    public Reel(FruitType fruitType) {
+//        this.reelOneChoice = reelOneChoice;
+//        this.reelTwoChoice = reelTwoChoice;
+//        this.reelThreeChoice = reelThreeChoice;
+//        fruits = new Array[];
+//
+////        generateReel();
+////        shuffle();
 
     }
 
-//    public void generateWheel() {
+//    public Array[] generateWheel() {
 //        for (FruitType fruitType : FruitType.values()) {
-//            fruit.add(fruitType);
+//            fruits.add(fruitType);
 //        }
+//        return fruits;
 //    }
 
-
-    public FruitType randomiseReelChoice() {
-        FruitType[] array = {FruitType.CHERRIES, FruitType.LEMONS, FruitType.ORANGES};
-        Random rand = new Random();
-        int select = rand.nextInt(array.length);
-        return array[select];
-
-    }
-
-
-    public ArrayList<Enum> generateThreeWheels() {
-//        this.reelOneChoice;
-//        this.reelTwoChoice;
-//        this.reelThreeChoice;
-        this.fruits.add(setReelOneChoice());
-        this.fruits.add(setReelTwoChoice());
-        this.fruits.add(setReelThreeChoice());
-        return this.fruits;
+//
+//    public FruitType randomiseReelChoice() {
+//        FruitType[] array = {FruitType.CHERRIES, FruitType.LEMONS, FruitType.ORANGES};
+//        Random rand = new Random();
+//        int select = rand.nextInt(array.length);
+//        return array[select];
+//
+//    }
+//
+//
+//    public ArrayList<Enum> generateThreeWheels() {
+////        this.reelOneChoice;
+////        this.reelTwoChoice;
+////        this.reelThreeChoice;
+//        this.fruits.add(setReelOneChoice());
+//        this.fruits.add(setReelTwoChoice());
+//        this.fruits.add(setReelThreeChoice());
+//        return this.fruits;
 
 //        FruitType reelOneChoice setReelOneChoice();
-    }
+//    }
+//
+//    public FruitType setReelOneChoice() {
+//       return this.reelOneChoice = randomiseReelChoice();
+//    }
+//
+//    public FruitType setReelTwoChoice() {
+//       return this.reelTwoChoice = randomiseReelChoice();
+//    }
+//
+//    public FruitType setReelThreeChoice() {
+//       return this.reelThreeChoice = randomiseReelChoice();
+//    }
 
-    public FruitType setReelOneChoice() {
-       return this.reelOneChoice = randomiseReelChoice();
-    }
-
-    public FruitType setReelTwoChoice() {
-       return this.reelTwoChoice = randomiseReelChoice();
-    }
-
-    public FruitType setReelThreeChoice() {
-       return this.reelThreeChoice = randomiseReelChoice();
-    }
-
-
-}
+//
+//}
 //    private ArrayList<Card> cards;
 //
 //    public Deck(){

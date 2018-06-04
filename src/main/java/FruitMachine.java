@@ -4,6 +4,7 @@ import java.util.Random;
 public class FruitMachine {
 
 
+
     private int payout;
     private FruitType reelOneChoice;
     private FruitType reelTwoChoice;
@@ -11,56 +12,66 @@ public class FruitMachine {
 
 
 
-    public FruitMachine () {
+    public FruitMachine() {
 
         this.payout = payout; //or should this be 0 at initialisation
         this.reelOneChoice = reelOneChoice;
         this.reelTwoChoice = reelTwoChoice;
         this.reelThreeChoice = reelThreeChoice;
+
     }
 
 
-    public FruitType randomiseReelChoice(){
-        FruitType [] array = {FruitType.CHERRIES, FruitType.LEMONS, FruitType.ORANGES};
-        Random rand =  new Random();
+    public FruitType randomiseReelChoice() {
+        FruitType[] array = {FruitType.CHERRIES, FruitType.LEMONS, FruitType.ORANGES};
+        Random rand = new Random();
         int select = rand.nextInt(array.length);
         return array[select];
     }
 
     public void generateThreeWheels(){
-//        this.reelOneChoice;
-//        this.reelTwoChoice;
-//        this.reelThreeChoice;
+////        this.reelOneChoice;
+////        this.reelTwoChoice;
+////        this.reelThreeChoice;
         setReelOneChoice();
         setReelTwoChoice();
         setReelThreeChoice();
     }
 
-    public void setReelOneChoice(){
-        this.reelOneChoice = randomiseReelChoice();
+    public FruitType setReelOneChoice() {
+        return this.reelOneChoice = randomiseReelChoice();
     }
 
-    public void setReelTwoChoice(){
-        this.reelTwoChoice = randomiseReelChoice();
+    public FruitType setReelTwoChoice() {
+        return this.reelTwoChoice = randomiseReelChoice();
     }
 
-    public void setReelThreeChoice(){
-        this.reelThreeChoice = randomiseReelChoice();
+    public FruitType setReelThreeChoice() {
+        return this.reelThreeChoice = randomiseReelChoice();
     }
 
-    public int resultOfSpin(){
-        if (reelOneChoice.equals(FruitType.CHERRIES) && reelTwoChoice.equals(FruitType.CHERRIES) && reelThreeChoice.equals(FruitType.CHERRIES)){
-            return 1;}
-            else if (reelOneChoice.equals(FruitType.LEMONS) && reelTwoChoice.equals(FruitType.LEMONS) && reelThreeChoice.equals(FruitType.LEMONS)){
-                return 1;}
-                else if (reelOneChoice.equals(FruitType.ORANGES) && reelTwoChoice.equals(FruitType.ORANGES) && reelThreeChoice.equals(FruitType.ORANGES)){
-                    return 1;}
-                  else { return 0;}
-
-
+    public int resultOfSpin() {
+        if (reelOneChoice.equals(FruitType.CHERRIES) && reelTwoChoice.equals(FruitType.CHERRIES) && reelThreeChoice.equals(FruitType.CHERRIES)) {
+            payout += 1;
+            System.out.println("You have won £" + payout);
+            return payout;
+        } else if (reelOneChoice.equals(FruitType.LEMONS) && reelTwoChoice.equals(FruitType.LEMONS) && reelThreeChoice.equals(FruitType.LEMONS)) {
+            payout += 1;
+            System.out.println("You have won £" + payout);
+            return payout;
+        } else if (reelOneChoice.equals(FruitType.ORANGES) && reelTwoChoice.equals(FruitType.ORANGES) && reelThreeChoice.equals(FruitType.ORANGES)) {
+            payout += 1;
+            System.out.println("You have won £" + payout);
+            return payout;
+        } else {
+            System.out.println("You have lost. You have £" + payout);
+            return payout;
         }
 
+
     }
+
+}
 
 
 
