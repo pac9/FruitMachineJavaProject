@@ -5,8 +5,14 @@ import java.util.Random;
 
 public class Reel {
 
-    public Reel() {
+    private FruitType reelOneChoice;
+    private FruitType reelTwoChoice;
+    private FruitType reelThreeChoice;
 
+    public Reel(FruitType fruitType) {
+        this.reelOneChoice = reelOneChoice;
+        this.reelTwoChoice = reelTwoChoice;
+        this.reelThreeChoice = reelThreeChoice;
 //        generateReel();
 //        shuffle();
 
@@ -26,27 +32,29 @@ public class Reel {
         return array[select];
 
     }
+
+
+    public void generateThreeWheels() {
+//        this.reelOneChoice;
+//        this.reelTwoChoice;
+//        this.reelThreeChoice;
+        setReelOneChoice();
+        setReelTwoChoice();
+        setReelThreeChoice();
+    }
+
+    public FruitType setReelOneChoice() {
+       return this.reelOneChoice = randomiseReelChoice();
+    }
+
+    public FruitType setReelTwoChoice() {
+       return this.reelTwoChoice = randomiseReelChoice();
+    }
+
+    public FruitType setReelThreeChoice() {
+       return this.reelThreeChoice = randomiseReelChoice();
+    }
 }
-
-//
-
-//    public void generatechoic(){
-//        this.setReelOneChoic();
-//        this.setReelTwoChoic();
-//
-//
-//
-//    }
-
-//    public void setReeelOneChoice(){
-//        this,reelOneChoic = randomiseReelChoic();
-//    }
-
-
-//
-
-//
-
 //    private ArrayList<Card> cards;
 //
 //    public Deck(){
