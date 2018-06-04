@@ -45,7 +45,21 @@ public class FruitMachine {
     }
 
     public void setReelThreeChoice(){
-        this.reelTwoChoice = randomiseReelChoice();
+        this.reelThreeChoice = randomiseReelChoice();
+    }
+
+    public int resultOfSpin(){
+        if (reelOneChoice.equals(FruitType.CHERRIES) && reelTwoChoice.equals(FruitType.CHERRIES) && reelThreeChoice.equals(FruitType.CHERRIES)){
+            return 1;}
+            else if (reelOneChoice.equals(FruitType.LEMONS) && reelTwoChoice.equals(FruitType.LEMONS) && reelThreeChoice.equals(FruitType.LEMONS)){
+                return 1;}
+                else if (reelOneChoice.equals(FruitType.ORANGES) && reelTwoChoice.equals(FruitType.ORANGES) && reelThreeChoice.equals(FruitType.ORANGES)){
+                    return 1;}
+                  else { return 0;}
+
+
+        }
+
     }
 
 
@@ -53,4 +67,4 @@ public class FruitMachine {
 
 
 
-}
+

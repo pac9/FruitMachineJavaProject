@@ -8,11 +8,14 @@ public class Reel {
     private FruitType reelOneChoice;
     private FruitType reelTwoChoice;
     private FruitType reelThreeChoice;
+    private ArrayList<Enum> fruits;
 
     public Reel(FruitType fruitType) {
         this.reelOneChoice = reelOneChoice;
         this.reelTwoChoice = reelTwoChoice;
         this.reelThreeChoice = reelThreeChoice;
+        fruits = new ArrayList<>();
+
 //        generateReel();
 //        shuffle();
 
@@ -34,13 +37,16 @@ public class Reel {
     }
 
 
-    public void generateThreeWheels() {
+    public ArrayList<Enum> generateThreeWheels() {
 //        this.reelOneChoice;
 //        this.reelTwoChoice;
 //        this.reelThreeChoice;
-        setReelOneChoice();
-        setReelTwoChoice();
-        setReelThreeChoice();
+        this.fruits.add(setReelOneChoice());
+        this.fruits.add(setReelTwoChoice());
+        this.fruits.add(setReelThreeChoice());
+        return this.fruits;
+
+//        FruitType reelOneChoice setReelOneChoice();
     }
 
     public FruitType setReelOneChoice() {
@@ -54,6 +60,8 @@ public class Reel {
     public FruitType setReelThreeChoice() {
        return this.reelThreeChoice = randomiseReelChoice();
     }
+
+
 }
 //    private ArrayList<Card> cards;
 //
