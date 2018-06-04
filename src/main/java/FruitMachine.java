@@ -1,11 +1,20 @@
+import java.util.ArrayList;
+
 public class FruitMachine {
 
-    private FruitType fruit;
-    private String winnings;
+    private ArrayList<FruitType> fruit;
+    private int payout;
 
 
     public FruitMachine (){
-        this.fruit = fruit;
-        this.winnings = winnings;
+        fruit = new ArrayList<>();
+        this.payout = payout; //or should this be 0 at initialisation
+
     }
+
+
+
+
+
+
 }
