@@ -6,10 +6,12 @@ import static org.junit.Assert.assertEquals;
 public class PlayerTest {
 
     Player player;
+    FruitMachine fruitMachine;
 
     @Before
     public void before(){
-        player = new Player(10, 1,1);
+        fruitMachine = new FruitMachine(1);
+        player = new Player(10, fruitMachine.getStake(),1);
     }
 
     @Test
@@ -18,9 +20,8 @@ public class PlayerTest {
     }
 
     @Test
-    public void playerCanPlaceBet(){
-        assertEquals(1, player.playerPlaysGame());
-    }
+    public void checkPlayerHasWinnings(){
+    assertEquals(1, player.playerHasWinnings());}
 
     @Test
     public void checkCashDecreasesWhenBetPlaced(){
@@ -30,5 +31,10 @@ public class PlayerTest {
     @Test
     public void checkWinningsCanBeAddedToCash(){
         assertEquals(11, player.checkWinningsCanBeAddedToCash());
+    }
+
+    @Test
+    public void hasStake(){
+        assertEquals(1, player.getStake());
     }
 }

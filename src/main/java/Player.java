@@ -1,12 +1,12 @@
 public class Player {
 
     private int cash;
-    private int costToPlayGame;
     private int winnings;
+    private int stake;
 
-    public Player(int cash, int costToPlayGame, int winnings){
+    public Player(int cash, int stake, int winnings){
         this.cash = cash;
-        this.costToPlayGame = costToPlayGame ;
+        this.stake = stake;
         this.winnings = winnings;
     }
 
@@ -14,16 +14,21 @@ public class Player {
         return this.cash;
     }
 
-    public int playerPlaysGame(){
-        return this.costToPlayGame;
+    public int playerHasWinnings(){
+        return this.winnings;
     }
 
     public int decreaseCashWhenBetPlaced(){
-        return this.cash - this.costToPlayGame;
+        return this.cash - this.stake;
     }
 
     public int checkWinningsCanBeAddedToCash(){
         return this.cash + this.winnings;
     }
+
+    public int getStake(){
+        return this.stake;
+    }
+
 
 }

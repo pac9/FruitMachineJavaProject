@@ -9,7 +9,7 @@ public class Runner {
         System.out.println("\n");
 
         FruitMachine fruitMachine = new FruitMachine(1);
-        System.out.println("You have placed a £1 bet, let's role the reels....");
+        System.out.println("You have placed a £" + fruitMachine.getStake() + " bet, let's role the reels....");
         fruitMachine.generateThreeWheels();
 //        System.out.println("---------------------------");
         System.out.println("\n");

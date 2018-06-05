@@ -1,9 +1,6 @@
-import java.util.ArrayList;
 import java.util.Random;
 
 public class FruitMachine {
-
-
 
     private int payout;
     private FruitType reelOneChoice;
@@ -11,7 +8,6 @@ public class FruitMachine {
     private FruitType reelThreeChoice;
     private int cashIn;
     private int stake;
-
 
 
     public FruitMachine(int cashIn) {
@@ -72,11 +68,14 @@ public class FruitMachine {
             return payout;
         }
 
-
     }
 
     public int takesCashInFromPlayer() {
         return this.cashIn;
+    }
+
+    public int getStake(){
+        return this.stake;
     }
 }
 
