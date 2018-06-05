@@ -52,20 +52,22 @@ public class FruitMachine {
 
     public int resultOfSpin() {
         if (reelOneChoice.equals(FruitType.CHERRIES) && reelTwoChoice.equals(FruitType.CHERRIES) && reelThreeChoice.equals(FruitType.CHERRIES)) {
-            payout += 1;
-            System.out.println("You have won £" + payout);
+            payout += 5;
+            System.out.println("You have won £5");
             return payout;
         } else if (reelOneChoice.equals(FruitType.LEMONS) && reelTwoChoice.equals(FruitType.LEMONS) && reelThreeChoice.equals(FruitType.LEMONS)) {
-            payout += 1;
-            System.out.println("You have won £" + payout);
+            payout += 7;
+            System.out.println("You have won £7");
             return payout;
         } else if (reelOneChoice.equals(FruitType.ORANGES) && reelTwoChoice.equals(FruitType.ORANGES) && reelThreeChoice.equals(FruitType.ORANGES)) {
-            payout += 1;
-            System.out.println("You have won £" + payout);
+            payout += 6;
+            System.out.println("You have won £6");
             return payout;
         } else {
             System.out.println("Oh dear! You have lost");
-            return payout;
+            return getPayout();
+
+
         }
 
     }
@@ -74,14 +76,14 @@ public class FruitMachine {
         return this.cashIn;
     }
 
-    public int getPlayerStake(){
+    public int getPlayerStake() {
         return this.playerStake;
     }
 
 
     public int getCashInFromPlayer(int cash) {
         this.cashIn += cash;
-         return this.playerStake += cash;
+        return this.playerStake += cash;
     }
 
     public int getStake() {
@@ -94,11 +96,19 @@ public class FruitMachine {
 
     public void enoughCashToPlayGame() {
 //        int stakeRequired = fruitMachine.getStake();
-//        if (this.cash >= stakeRequired){
-//            this.cash -= stakeRequired;
+        if (this.playerStake >= this.stake) {
+            this.playerStake -= this.stake;
+
 //            fruitMachine.getCashInFromPlayer(stakeRequired);
-//        }
-//    }
+        }
+//        System.out.println("You have insufficient funds to play this game");
+
+
+    }
+
+    public void outOfFunds(){
+        if (this.playerStake > this.stake){
+            generateThreeWheels();}
     }
 }
 
