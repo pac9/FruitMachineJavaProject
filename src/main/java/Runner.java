@@ -9,7 +9,7 @@ public class Runner {
         System.out.println("\n");
         FruitMachine fruitMachine = new FruitMachine(1);
         Player player = new Player(10, fruitMachine.getStake(), 1);
-        System.out.println("Balance: £" + player.playerPutsCashIntoMachine());
+        System.out.println("Balance: £" + player.getCash());
         System.out.println("You have placed a £" + fruitMachine.getStake() + " bet, let's role the reels....");
         fruitMachine.generateThreeWheels();
 //        System.out.println("---------------------------");
@@ -21,6 +21,7 @@ public class Runner {
         fruitMachine.resultOfSpin();
         System.out.println("\n");
         System.out.println("Balance remaining: £" + player.decreaseCashWhenBetPlaced());
+        System.out.println("Winnings to date: £" + player.getWinnings());
 
     }
 }

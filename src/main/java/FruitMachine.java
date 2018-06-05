@@ -21,7 +21,6 @@ public class FruitMachine {
 
     }
 
-
     public FruitType randomiseReelChoice() {
         FruitType[] array = {FruitType.CHERRIES, FruitType.LEMONS, FruitType.ORANGES};
         Random rand = new Random();
@@ -70,12 +69,16 @@ public class FruitMachine {
 
     }
 
-    public int takesCashInFromPlayer() {
+    public int getCashInFromPlayer() {
         return this.cashIn;
     }
 
     public int getStake(){
         return this.stake;
+    }
+
+    public int getPayout(){
+        return this.payout;
     }
 }
 

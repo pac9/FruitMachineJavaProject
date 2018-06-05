@@ -10,11 +10,11 @@ public class Player {
         this.winnings = winnings;
     }
 
-    public int playerPutsCashIntoMachine(){
+    public int getCash(){
         return this.cash;
     }
 
-    public int playerHasWinnings(){
+    public int getWinnings(){
         return this.winnings;
     }
 

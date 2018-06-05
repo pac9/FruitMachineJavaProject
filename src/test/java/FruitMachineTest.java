@@ -45,12 +45,17 @@ public class FruitMachineTest {
 
     @Test
     public void hasCashIn(){
-        assertEquals(1, fruitMachine.takesCashInFromPlayer());
+        assertEquals(1, fruitMachine.getCashInFromPlayer());
     }
 
     @Test
     public void hasStake(){
         assertEquals(1, fruitMachine.getStake());
+    }
+
+    @Test
+    public void hasPayout(){
+        assertEquals(0, fruitMachine.getPayout());
     }
 }
 
