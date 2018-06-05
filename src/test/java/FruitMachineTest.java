@@ -7,6 +7,7 @@ import static org.junit.Assert.assertNotNull;
 public class FruitMachineTest {
 
     FruitMachine fruitMachine;
+    Player player;
 
     @Before
     public void before() {
@@ -44,8 +45,11 @@ public class FruitMachineTest {
     }
 
     @Test
-    public void hasCashIn(){
-        assertEquals(1, fruitMachine.getCashInFromPlayer());
+    public void hasCashInFromPlayer(){
+        player = new Player(1, 1, 1);
+         player.enoughCashToPlayGame(fruitMachine);
+        player.enoughCashToPlayGame(fruitMachine);
+        assertEquals(3, fruitMachine.getCashInFromPlayer(1));
     }
 
     @Test

@@ -18,7 +18,7 @@ public class PlayerTest {
     public void checkPlayerHasCash(){
         assertEquals(10, player.getCash());
     }
-
+ 
     @Test
     public void checkPlayerHasWinnings(){
     assertEquals(0, player.getWinnings());}

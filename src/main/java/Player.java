@@ -30,5 +30,13 @@ public class Player {
         return this.stake;
     }
 
+    public void enoughCashToPlayGame(FruitMachine fruitMachine){
+        int stakeRequired = fruitMachine.getStake();
+        if (this.cash >= stakeRequired){
+            this.cash -= stakeRequired;
+            fruitMachine.getCashInFromPlayer(stakeRequired);
+        }
+    }
+
 
 }

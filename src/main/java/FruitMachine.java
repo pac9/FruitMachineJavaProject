@@ -69,8 +69,8 @@ public class FruitMachine {
 
     }
 
-    public int getCashInFromPlayer() {
-        return this.cashIn;
+    public int getCashInFromPlayer(int stake) {
+        return this.cashIn += stake ;
     }
 
     public int getStake(){
