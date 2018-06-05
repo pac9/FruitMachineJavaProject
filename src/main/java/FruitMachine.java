@@ -8,9 +8,10 @@ public class FruitMachine {
     private FruitType reelThreeChoice;
     private int cashIn;
     private int stake;
+    private int playerStake;
 
 
-    public FruitMachine(int cashIn) {
+    public FruitMachine() {
 
         this.cashIn = cashIn;
         this.stake = 1;
@@ -18,7 +19,7 @@ public class FruitMachine {
         this.reelTwoChoice = reelTwoChoice;
         this.reelThreeChoice = reelThreeChoice;
         this.payout = payout; //or should this be 0 at initialisation
-
+        this.playerStake = playerStake;
     }
 
     public FruitType randomiseReelChoice() {
@@ -28,7 +29,7 @@ public class FruitMachine {
         return array[select];
     }
 
-    public void generateThreeWheels(){
+    public void generateThreeWheels() {
 ////        this.reelOneChoice;
 ////        this.reelTwoChoice;
 ////        this.reelThreeChoice;
@@ -69,19 +70,37 @@ public class FruitMachine {
 
     }
 
-    public int getCashInFromPlayer(int stake) {
-        return this.cashIn += stake ;
+    public int getCashIn() {
+        return this.cashIn;
     }
 
-    public int getStake(){
+    public int getPlayerStake(){
+        return this.playerStake;
+    }
+
+
+    public int getCashInFromPlayer(int cash) {
+        this.cashIn += cash;
+         return this.playerStake += cash;
+    }
+
+    public int getStake() {
         return this.stake;
     }
 
-    public int getPayout(){
+    public int getPayout() {
         return this.payout;
     }
-}
 
+    public void enoughCashToPlayGame() {
+//        int stakeRequired = fruitMachine.getStake();
+//        if (this.cash >= stakeRequired){
+//            this.cash -= stakeRequired;
+//            fruitMachine.getCashInFromPlayer(stakeRequired);
+//        }
+//    }
+    }
+}
 
 
 

@@ -11,7 +11,7 @@ public class FruitMachineTest {
 
     @Before
     public void before() {
-        fruitMachine = new FruitMachine(1);
+        fruitMachine = new FruitMachine();
     }
 
     @Test
@@ -46,10 +46,10 @@ public class FruitMachineTest {
 
     @Test
     public void hasCashInFromPlayer(){
-        player = new Player(1, 1, 1);
-         player.enoughCashToPlayGame(fruitMachine);
-        player.enoughCashToPlayGame(fruitMachine);
-        assertEquals(3, fruitMachine.getCashInFromPlayer(1));
+        player = new Player(5, 1);
+//         player.insertCashIntoFruitMachine(fruitMachine);
+//        player.enoughCashToPlayGame(fruitMachine);
+        assertEquals(5, fruitMachine.getCashInFromPlayer(player.getCash()));
     }
 
     @Test
@@ -60,6 +60,16 @@ public class FruitMachineTest {
     @Test
     public void hasPayout(){
         assertEquals(0, fruitMachine.getPayout());
+    }
+
+    @Test
+    public void hasCashIn(){
+        assertEquals(0, fruitMachine.getCashIn());
+    }
+
+    @Test
+    public void hasPlayerStake(){
+        assertEquals(0, fruitMachine.getPlayerStake());
     }
 }
 

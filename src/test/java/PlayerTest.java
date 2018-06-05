@@ -10,8 +10,8 @@ public class PlayerTest {
 
     @Before
     public void before(){
-        fruitMachine = new FruitMachine(1);
-        player = new Player(10, fruitMachine.getStake(), fruitMachine.getPayout());
+        fruitMachine = new FruitMachine();
+        player = new Player(10, fruitMachine.getPayout());
     }
 
     @Test
@@ -23,18 +23,15 @@ public class PlayerTest {
     public void checkPlayerHasWinnings(){
     assertEquals(0, player.getWinnings());}
 
-    @Test
-    public void checkCashDecreasesWhenBetPlaced(){
-        assertEquals(9, player.decreaseCashWhenBetPlaced());
-    }
+//    @Test
+//    public void checkCashDecreasesWhenBetPlaced(){
+//        assertEquals(9, player.decreaseCashWhenBetPlaced());
+//    }
 
     @Test
     public void checkWinningsCanBeAddedToCash(){
         assertEquals(10, player.checkWinningsCanBeAddedToCash());
     }
 
-    @Test
-    public void hasStake(){
-        assertEquals(1, player.getStake());
-    }
+
 }

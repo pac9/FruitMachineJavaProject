@@ -7,9 +7,9 @@ public class Runner {
         System.out.println("\n");
         System.out.println("Welcome to The House Always Win");
         System.out.println("\n");
-        FruitMachine fruitMachine = new FruitMachine(1);
-        Player player = new Player(10, fruitMachine.getStake(), 1);
-        System.out.println("Balance: £" + player.getCash());
+        FruitMachine fruitMachine = new FruitMachine();
+        Player player = new Player(10, 1);
+        System.out.println("Balance: £" + fruitMachine.getCashInFromPlayer(player.getCash()));
         System.out.println("You have placed a £" + fruitMachine.getStake() + " bet, let's role the reels....");
         fruitMachine.generateThreeWheels();
 //        System.out.println("---------------------------");
@@ -20,8 +20,10 @@ public class Runner {
         fruitMachine.randomiseReelChoice();
         fruitMachine.resultOfSpin();
         System.out.println("\n");
-        System.out.println("Balance remaining: £" + player.decreaseCashWhenBetPlaced());
+//        System.out.println("Balance remaining: £" + player.decreaseCashWhenBetPlaced());
         System.out.println("Winnings to date: £" + player.getWinnings());
+
+        System.out.println("Balance in machine: £" + fruitMachine.getCashIn());
 
     }
 }
