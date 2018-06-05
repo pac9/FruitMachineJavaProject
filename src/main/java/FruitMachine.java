@@ -64,7 +64,7 @@ public class FruitMachine {
             System.out.println("You have won £" + payout);
             return payout;
         } else {
-            System.out.println("You have lost. You have £" + payout);
+            System.out.println("Oh dear! You have lost");
             return payout;
         }
 
