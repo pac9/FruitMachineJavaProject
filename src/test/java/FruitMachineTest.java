@@ -10,7 +10,7 @@ public class FruitMachineTest {
 
     @Before
     public void before() {
-        fruitMachine = new FruitMachine();
+        fruitMachine = new FruitMachine(1);
     }
 
     @Test
@@ -41,7 +41,11 @@ public class FruitMachineTest {
         //this is on assumption that player loses. Need to find a better way to prove this test as
         //currently proving this via the debugger.
 
+    }
 
+    @Test
+    public void hasCashIn(){
+        assertEquals(1, fruitMachine.takesCashInFromPlayer());
     }
 }
 

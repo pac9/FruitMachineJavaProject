@@ -8,7 +8,7 @@ public class Runner {
         System.out.println("Welcome to The House Always Win");
         System.out.println("\n");
 
-        FruitMachine fruitMachine = new FruitMachine();
+        FruitMachine fruitMachine = new FruitMachine(1);
         System.out.println("You have placed a £1 bet, let's role the reels....");
         fruitMachine.generateThreeWheels();
 //        System.out.println("---------------------------");

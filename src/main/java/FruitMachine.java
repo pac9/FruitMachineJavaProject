@@ -9,15 +9,19 @@ public class FruitMachine {
     private FruitType reelOneChoice;
     private FruitType reelTwoChoice;
     private FruitType reelThreeChoice;
+    private int cashIn;
+    private int stake;
 
 
 
-    public FruitMachine() {
+    public FruitMachine(int cashIn) {
 
-        this.payout = payout; //or should this be 0 at initialisation
+        this.cashIn = cashIn;
+        this.stake = 1;
         this.reelOneChoice = reelOneChoice;
         this.reelTwoChoice = reelTwoChoice;
         this.reelThreeChoice = reelThreeChoice;
+        this.payout = payout; //or should this be 0 at initialisation
 
     }
 
@@ -71,6 +75,9 @@ public class FruitMachine {
 
     }
 
+    public int takesCashInFromPlayer() {
+        return this.cashIn;
+    }
 }
 
 
