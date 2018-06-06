@@ -15,7 +15,8 @@ public abstract class FruitMachine {
     private int stake;
     private int playerStake;
     private String name;
-    protected int reels;
+//    protected int reels;
+
 
 
     public FruitMachine(String name) {
@@ -28,7 +29,7 @@ public abstract class FruitMachine {
         this.payout = payout;
         this.playerStake = playerStake;
         this.name = name;
-        this.reels = 3;
+//        this.reels = 3;
     }
 
     public abstract Enum randomiseReelChoice();
@@ -130,7 +131,19 @@ removed as now in child classes
             }
 
         }
+
     }
+//    public boolean generateReels(this.reels){
+//            ArrayList<Integer> countReels = new ArrayList<>();
+//            for (int x = 0; x < reels; x++) {
+//                countReels.add(getRandomReels());
+//            }
+
+
+//
+//    public int getReels() {
+//            return this.reels;
+//    }
 }
 
 

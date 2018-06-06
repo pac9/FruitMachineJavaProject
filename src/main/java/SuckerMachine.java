@@ -3,11 +3,8 @@ import java.util.Random;
 
 public class SuckerMachine extends FruitMachine {
 
-//    private int reels;
-
     public SuckerMachine(String name) {
         super(name);
-//        this.reels = 3;
     }
 
     public Enum randomiseReelChoice() {
@@ -37,18 +34,9 @@ public class SuckerMachine extends FruitMachine {
             return getPayout();
         }
 
-//        public boolean generateReels(this.reels){
-//            ArrayList<Integer> countReels = new ArrayList<>();
-//            for (int x = 0; x < reels; x++) {
-//                countReels.add(getRandomReels());
-//            }
-
-        }
-//
-//    public int getReels() {
-//            return this.reels;
-//    }
+    }
 }
+
 
 
 
