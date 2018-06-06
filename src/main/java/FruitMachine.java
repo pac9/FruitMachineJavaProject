@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class FruitMachine {
+public abstract class FruitMachine {
 
     private int payout;
     private FruitType reelOneChoice;

@@ -9,30 +9,31 @@ public class Runner {
 
         Scanner keyboard = new Scanner(System.in);
         System.out.println("\n");
-        System.out.println("Welcome to The House Always Win");
+        TheHouseAlwaysWinMachine theHouseAlwaysWinMachine = new TheHouseAlwaysWinMachine("The House Always Wins");
+        System.out.println("Welcome to " + theHouseAlwaysWinMachine.getName());
         System.out.println("\n");
-        FruitMachine fruitMachine = new FruitMachine();
+
         Player player = new Player(10);
 
-        System.out.println("Balance: £" + fruitMachine.getCashInFromPlayer(player.getCash()));
-        System.out.println("You have placed a £" + fruitMachine.getStake() + " bet, let's role the reels....");
+        System.out.println("Balance: £" + theHouseAlwaysWinMachine.getCashInFromPlayer(player.getCash()));
+        System.out.println("You have placed a £" + theHouseAlwaysWinMachine.getStake() + " bet, let's role the reels....");
 
-        while (fruitMachine.getPlayerStake() > 0) {
+        while (theHouseAlwaysWinMachine.getPlayerStake() > 0) {
             char playAgain;
 //
-            fruitMachine.enoughCashToPlayGame();
-            fruitMachine.outOfFunds();
-            fruitMachine.generateThreeWheels();
+            theHouseAlwaysWinMachine.enoughCashToPlayGame();
+            theHouseAlwaysWinMachine.outOfFunds();
+            theHouseAlwaysWinMachine.generateThreeWheels();
 //        System.out.println("---------------------------");
             System.out.println("\n");
             System.out.println("Reel 1    " + "Reel 2    " + "Reel 3     ");
-            System.out.println(fruitMachine.setReelOneChoice() + " | " + fruitMachine.setReelTwoChoice() + " | " + fruitMachine.setReelThreeChoice());
+            System.out.println(theHouseAlwaysWinMachine.setReelOneChoice() + " | " + theHouseAlwaysWinMachine.setReelTwoChoice() + " | " + theHouseAlwaysWinMachine.setReelThreeChoice());
             System.out.println("\n");
-            fruitMachine.randomiseReelChoice();
-            fruitMachine.resultOfSpin();
+            theHouseAlwaysWinMachine.randomiseReelChoice();
+            theHouseAlwaysWinMachine.resultOfSpin();
             System.out.println("\n");
-            System.out.println("Balance remaining: £" + fruitMachine.getPlayerStake());
-            System.out.println("Winnings to date: £" + fruitMachine.getPayout());
+            System.out.println("Balance remaining: £" + theHouseAlwaysWinMachine.getPlayerStake());
+            System.out.println("Winnings to date: £" + theHouseAlwaysWinMachine.getPayout());
             System.out.println("\n");
             System.out.println("Press 'Y' to play again, or any other button to exit");
             String input = keyboard.next();
@@ -47,9 +48,9 @@ public class Runner {
 
 
         }
-        player.getWinningsFromMachine(fruitMachine.getPayout());
+        player.getWinningsFromMachine(theHouseAlwaysWinMachine.getPayout());
 //        System.out.println("Winnings transferred: £" + player.getWinningsFromMachine(fruitMachine.getPayout()));
-        System.out.println("Winnings transferred: £" + player.getWinnings());
+        System.out.println("Winnings transferred to your account: £" + player.getWinnings());
 
     }
 
