@@ -9,51 +9,62 @@ public class Runner {
 
         Scanner keyboard = new Scanner(System.in);
         System.out.println("\n");
-        TheHouseAlwaysWinMachine theHouseAlwaysWinMachine = new TheHouseAlwaysWinMachine("The House Always Wins");
-        System.out.println("Welcome to " + theHouseAlwaysWinMachine.getName());
-        System.out.println("\n");
+        System.out.println("Please select which machine you would like to play");
+        System.out.println("Press H to play 'The House Always Wins' else select any other button to play 'Suckers'");
+        String select = keyboard.next();
+        char gameSelection = select.charAt(0);
+        if (gameSelection == ('H') || gameSelection == ('h')) {
+            FruitMachine fruitMachine = new TheHouseAlwaysWinMachine("The House Always Wins");
 
-        Player player = new Player(10);
+//        System.out.println("Welcome to " + getName());
+            System.out.println("\n");
 
-        System.out.println("Balance: £" + theHouseAlwaysWinMachine.getCashInFromPlayer(player.getCash()));
-        System.out.println("You have placed a £" + theHouseAlwaysWinMachine.getStake() + " bet, let's role the reels....");
+            Player player = new Player(10);
 
-        while (theHouseAlwaysWinMachine.getPlayerStake() > 0) {
-            char playAgain;
+            System.out.println("Balance: £" + fruitMachine.getCashInFromPlayer(player.getCash()));
+            System.out.println("You have placed a £" + fruitMachine.getStake() + " bet, let's role the reels....");
+
+            while (fruitMachine.getPlayerStake() > 0) {
+                char playAgain;
 //
-            theHouseAlwaysWinMachine.enoughCashToPlayGame();
-            theHouseAlwaysWinMachine.outOfFunds();
-            theHouseAlwaysWinMachine.generateThreeWheels();
+                fruitMachine.enoughCashToPlayGame();
+                fruitMachine.outOfFunds();
+                fruitMachine.generateThreeWheels();
 //        System.out.println("---------------------------");
-            System.out.println("\n");
-            System.out.println("Reel 1    " + "Reel 2    " + "Reel 3     ");
-            System.out.println(theHouseAlwaysWinMachine.setReelOneChoice() + " | " + theHouseAlwaysWinMachine.setReelTwoChoice() + " | " + theHouseAlwaysWinMachine.setReelThreeChoice());
-            System.out.println("\n");
-            theHouseAlwaysWinMachine.randomiseReelChoice();
-            theHouseAlwaysWinMachine.resultOfSpin();
-            System.out.println("\n");
-            System.out.println("Balance remaining: £" + theHouseAlwaysWinMachine.getPlayerStake());
-            System.out.println("Winnings to date: £" + theHouseAlwaysWinMachine.getPayout());
-            System.out.println("\n");
-            System.out.println("Press 'Y' to play again, or any other button to exit");
-            String input = keyboard.next();
-            playAgain = input.charAt(0);
-            if (playAgain == ('Y') || playAgain == ('y')) {
-                continue;
-            } else if (playAgain != ('Y') || playAgain == ('y')) {
-                System.out.println("Thanks for playing!");
-                break;
+                System.out.println("\n");
+                System.out.println("Reel 1    " + "Reel 2    " + "Reel 3     ");
+                System.out.println(fruitMachine.setReelOneChoice() + " | " + fruitMachine.setReelTwoChoice() + " | " + fruitMachine.setReelThreeChoice());
+                System.out.println("\n");
+                fruitMachine.randomiseReelChoice();
+                fruitMachine.resultOfSpin();
+                System.out.println("\n");
+                System.out.println("Balance remaining: £" + fruitMachine.getPlayerStake());
+                System.out.println("Winnings to date: £" + fruitMachine.getPayout());
+                System.out.println("\n");
+                System.out.println("Press 'Y' to play again, or any other button to exit");
+                String input = keyboard.next();
+                playAgain = input.charAt(0);
+                if (playAgain == ('Y') || playAgain == ('y')) {
+                    continue;
+                } else if (playAgain != ('Y') || playAgain == ('y')) {
+                    System.out.println("Thanks for playing!");
+                    break;
+
+                }
+
 
             }
-
-
-        }
-        player.getWinningsFromMachine(theHouseAlwaysWinMachine.getPayout());
+            player.getWinningsFromMachine(fruitMachine.getPayout());
 //        System.out.println("Winnings transferred: £" + player.getWinningsFromMachine(fruitMachine.getPayout()));
-        System.out.println("Winnings transferred to your account: £" + player.getWinnings());
+            System.out.println("Winnings transferred to your account: £" + player.getWinnings());
+
+        } else if (gameSelection != ('Y') || gameSelection == ('y')) {
+            System.out.println("'Suckers' game coming soon!");
+        }
+
 
     }
+}
 
 //        System.out.println("Balance in machine: £" + fruitMachine.getCashIn());
 
-    }
