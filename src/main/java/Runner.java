@@ -30,11 +30,9 @@ public class Runner {
 
             while (fruitMachine.getPlayerStake() > 0) {
                 char playAgain;
-//
                 fruitMachine.enoughCashToPlayGame();
                 fruitMachine.outOfFunds();
                 fruitMachine.generateThreeWheels();
-//        System.out.println("---------------------------");
                 System.out.println("\n");
                 System.out.println("Reel 1    " + "Reel 2    " + "Reel 3     ");
                 System.out.println(fruitMachine.setReelOneChoice() + " | " + fruitMachine.setReelTwoChoice() + " | " + fruitMachine.setReelThreeChoice());
@@ -59,7 +57,6 @@ public class Runner {
 
             }
             player.getWinningsFromMachine(fruitMachine.getPayout());
-//        System.out.println("Winnings transferred: £" + player.getWinningsFromMachine(fruitMachine.getPayout()));
             System.out.println("Winnings transferred to your account: £" + player.getWinnings());
 
         }
@@ -70,8 +67,8 @@ public class Runner {
             System.out.println("Welcome to " + fruitMachine.getName());
             System.out.println("---------------------------");
             System.out.println("|   3 Cherries wins £5    |");
-            System.out.println("|   3 Lemons   wins £7    |");
             System.out.println("|   3 Oranges  wins £6    |");
+            System.out.println("|   3 Lemons   wins £7    |");
             System.out.println("---------------------------");
 
 
@@ -105,17 +102,13 @@ public class Runner {
                 } else if (playAgain != ('Y') || playAgain == ('y')) {
                     System.out.println("Thanks for playing!");
                     break;
-
                 }
-
 
             }
             player.getWinningsFromMachine(fruitMachine.getPayout());
-//        System.out.println("Winnings transferred: £" + player.getWinningsFromMachine(fruitMachine.getPayout()));
             System.out.println("Winnings transferred to your account: £" + player.getWinnings());
 
         }
-
 
     }
 }
