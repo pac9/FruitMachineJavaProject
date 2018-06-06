@@ -2,10 +2,10 @@ import java.util.Random;
 
 public abstract class FruitMachine {
 
-    private int payout;
-    private FruitType reelOneChoice;
-    private FruitType reelTwoChoice;
-    private FruitType reelThreeChoice;
+    protected int payout;
+    protected Enum reelOneChoice;
+    protected Enum reelTwoChoice;
+    protected Enum reelThreeChoice;
     private int cashIn;
     private int stake;
     private int playerStake;
@@ -22,7 +22,9 @@ public abstract class FruitMachine {
         this.playerStake = playerStake;
     }
 
-    public FruitType randomiseReelChoice() {
+    public Enum randomiseReelChoice(){
+//
+
         FruitType[] array = {FruitType.CHERRIES, FruitType.LEMONS, FruitType.ORANGES};
         Random rand = new Random();
         int select = rand.nextInt(array.length);
@@ -38,15 +40,15 @@ public abstract class FruitMachine {
         setReelThreeChoice();
     }
 
-    public FruitType setReelOneChoice() {
+    public Enum setReelOneChoice() {
         return this.reelOneChoice = randomiseReelChoice();
     }
 
-    public FruitType setReelTwoChoice() {
+    public Enum setReelTwoChoice() {
         return this.reelTwoChoice = randomiseReelChoice();
     }
 
-    public FruitType setReelThreeChoice() {
+    public Enum setReelThreeChoice() {
         return this.reelThreeChoice = randomiseReelChoice();
     }
 
