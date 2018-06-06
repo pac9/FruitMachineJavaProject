@@ -12,14 +12,14 @@ public class Runner {
         System.out.println("Welcome to The House Always Win");
         System.out.println("\n");
         FruitMachine fruitMachine = new FruitMachine();
-        Player player = new Player(10, fruitMachine.getPayout());
+        Player player = new Player(10);
 
         System.out.println("Balance: £" + fruitMachine.getCashInFromPlayer(player.getCash()));
         System.out.println("You have placed a £" + fruitMachine.getStake() + " bet, let's role the reels....");
 
         while (fruitMachine.getPlayerStake() > 0) {
             char playAgain;
-//                do {
+//
             fruitMachine.enoughCashToPlayGame();
             fruitMachine.outOfFunds();
             fruitMachine.generateThreeWheels();
@@ -39,31 +39,20 @@ public class Runner {
             playAgain = input.charAt(0);
             if (playAgain == ('Y') || playAgain == ('y')) {
                 continue;
-            } else if (playAgain == ('N') || playAgain == ('n')) {
+            } else if (playAgain != ('Y') || playAgain == ('y')) {
                 System.out.println("Thanks for playing!");
                 break;
-            } else if (playAgain != ('N') || playAgain == ('n') || playAgain != ('y') || playAgain != ('Y')) {
-                System.out.println("Please press Y or N");
-                continue;
 
             }
 
 
-//                while (playAgain == 'Y' || playAgain == 'y');
-//                System.out.println("Thanks for playing!");
-//                System.exit(0);
-
-
         }
+        player.getWinningsFromMachine(fruitMachine.getPayout());
+//        System.out.println("Winnings transferred: £" + player.getWinningsFromMachine(fruitMachine.getPayout()));
+        System.out.println("Winnings transferred: £" + player.getWinnings());
 
     }
-//
-
-
-//        }
 
 //        System.out.println("Balance in machine: £" + fruitMachine.getCashIn());
 
-//
-//
     }

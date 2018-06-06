@@ -4,7 +4,7 @@ public class Player {
     private int winnings;
 
 
-    public Player(int cash, int winnings){
+    public Player(int cash){
         this.cash = cash;
         this.winnings = winnings;
     }
@@ -42,4 +42,7 @@ public class Player {
     }
 
 
+    public int getWinningsFromMachine(int payout) {
+        return this.winnings += payout;
+    }
 }

@@ -46,7 +46,7 @@ public class FruitMachineTest {
 
     @Test
     public void hasCashInFromPlayer(){
-        player = new Player(5, 1);
+        player = new Player(5);
 //         player.insertCashIntoFruitMachine(fruitMachine);
 //        player.enoughCashToPlayGame(fruitMachine);
         assertEquals(5, fruitMachine.getCashInFromPlayer(player.getCash()));

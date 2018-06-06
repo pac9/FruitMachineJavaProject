@@ -110,6 +110,10 @@ public class FruitMachine {
         if (this.playerStake > this.stake){
             generateThreeWheels();}
     }
+
+    public void transferWinningsToPlayer(Player player){
+        player.getWinningsFromMachine(this.payout);
+    }
 }
 
 
