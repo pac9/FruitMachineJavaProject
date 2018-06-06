@@ -25,8 +25,6 @@ public abstract class FruitMachine {
     }
 
     public Enum randomiseReelChoice(){
-//
-
         FruitType[] array = {FruitType.CHERRIES, FruitType.LEMONS, FruitType.ORANGES};
         Random rand = new Random();
         int select = rand.nextInt(array.length);
@@ -34,9 +32,6 @@ public abstract class FruitMachine {
     }
 
     public void generateThreeWheels() {
-////        this.reelOneChoice;
-////        this.reelTwoChoice;
-////        this.reelThreeChoice;
         setReelOneChoice();
         setReelTwoChoice();
         setReelThreeChoice();
