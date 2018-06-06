@@ -69,8 +69,8 @@ public class TheHouseAlwaysWinMachineTest {
         theHouseAlwaysWinMachine.setReelThreeChoice();
 
         assertEquals(0, theHouseAlwaysWinMachine.resultOfSpin());
-        //this is on assumption that player loses. Need to find a better way to prove this test as
-        //currently proving this via the debugger.
+//        this is on assumption that player loses. Need to find a better way to prove this test as
+//        currently proving this via the debugger.
     }
 
     @Test

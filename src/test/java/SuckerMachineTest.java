@@ -65,22 +65,32 @@ public class SuckerMachineTest {
         assertNotNull(outcome);
     }
 
-    @Test
-    public void hasOutcomeOfSpins() {
-        suckerMachine.setReelTwoChoice();
-        suckerMachine.setReelOneChoice();
-        suckerMachine.setReelThreeChoice();
 
-        assertEquals(0, suckerMachine.resultOfSpin());
+   @Test
+   public void hasOutcomeOfSpins() {
+       suckerMachine.setReelTwoChoice();
+       suckerMachine.setReelOneChoice();
+       suckerMachine.setReelThreeChoice();
+    assertEquals(0, suckerMachine.resultOfSpin());
+    }
         //this is on assumption that player loses. Need to find a better way to prove this test as
         //currently proving this via the debugger.
-    }
+
 
     @Test
     public void hasRandomReelChoice(){
         Enum outcome = suckerMachine.randomiseReelChoice();
         assertNotNull(outcome);
     }
+
+//    @Test
+//    public void hasReels(){
+//        assertEquals(3, suckerMachine.getReels());
+//    }
+
+
+
+
 
 }
 

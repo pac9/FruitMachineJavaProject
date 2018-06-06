@@ -1,3 +1,6 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public abstract class FruitMachine {
@@ -10,6 +13,7 @@ public abstract class FruitMachine {
     private int stake;
     private int playerStake;
     private String name;
+    protected int reels;
 
 
     public FruitMachine(String name) {
@@ -22,6 +26,7 @@ public abstract class FruitMachine {
         this.payout = payout;
         this.playerStake = playerStake;
         this.name = name;
+        this.reels = 3;
     }
 
     public abstract Enum randomiseReelChoice();
@@ -81,19 +86,24 @@ removed as now in child classes
         }
     }
 
-    public void outOfFunds(){
-        if (this.playerStake > this.stake){
-            generateThreeWheels();}
+    public void outOfFunds() {
+        if (this.playerStake > this.stake) {
+            generateThreeWheels();
+        }
     }
 
-    public void transferWinningsToPlayer(Player player){
+    public void transferWinningsToPlayer(Player player) {
         player.getWinningsFromMachine(this.payout);
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-}
+
+
+
+    }
+
 
 
 

@@ -1,9 +1,13 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 public class SuckerMachine extends FruitMachine {
 
+//    private int reels;
+
     public SuckerMachine(String name) {
         super(name);
+//        this.reels = 3;
     }
 
     public Enum randomiseReelChoice() {
@@ -25,15 +29,29 @@ public class SuckerMachine extends FruitMachine {
                 System.out.println("You have won £7");
             } else if (reelOneChoice == FruitType.ORANGES) {
                 payout += 6;
-                System.out.println("You have won £6");}
-                return payout;}
-            else {
-                System.out.println("Oh dear! You have lost");
-                return getPayout();
+                System.out.println("You have won £6");
             }
+            return payout;
+        } else {
+            System.out.println("Oh dear! You have lost");
+            return getPayout();
+        }
 
+//        public boolean generateReels(this.reels){
+//            ArrayList<Integer> countReels = new ArrayList<>();
+//            for (int x = 0; x < reels; x++) {
+//                countReels.add(getRandomReels());
+//            }
 
         }
-    }
+//
+//    public int getReels() {
+//            return this.reels;
+//    }
+}
+
+
+
+
 
 
