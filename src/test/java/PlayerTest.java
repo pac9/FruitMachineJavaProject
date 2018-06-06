@@ -24,21 +24,10 @@ public class PlayerTest {
     public void checkPlayerHasWinnings(){
     assertEquals(0, player.getWinnings());}
 
-//    @Test
-//    public void checkCashDecreasesWhenBetPlaced(){
-//        assertEquals(9, player.decreaseCashWhenBetPlaced());
-//    }
-
-    @Test
-    public void checkWinningsCanBeAddedToCash(){
-        assertEquals(10, player.checkWinningsCanBeAddedToCash());
-    }
-
-
     @Test
     public void hasWinningsInFromMachine(){
-//
-        assertEquals(0, player.getWinningsFromMachine(theHouseAlwaysWinMachine.getPayout()));
+    player.getWinningsFromMachine(theHouseAlwaysWinMachine.getPayout());
+        assertEquals(0, player.getWinnings());
     }
     //result assumes there is no payout but payout is random so should consider this in test
 

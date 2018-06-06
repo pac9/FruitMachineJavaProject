@@ -17,14 +17,8 @@ public class Player {
         return this.winnings;
     }
 
-
-    public int checkWinningsCanBeAddedToCash(){
-        return this.cash + this.winnings;
-    }
-
     public void insertCashIntoFruitMachine(FruitMachine fruitMachine){
         fruitMachine.getCashInFromPlayer(this.cash);
-
     }
 
     public int getWinningsFromMachine(int payout) {

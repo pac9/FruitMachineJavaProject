@@ -24,12 +24,15 @@ public abstract class FruitMachine {
         this.name = name;
     }
 
-    public Enum randomiseReelChoice(){
-        FruitType[] array = {FruitType.CHERRIES, FruitType.LEMONS, FruitType.ORANGES};
-        Random rand = new Random();
-        int select = rand.nextInt(array.length);
-        return array[select];
-    }
+    public abstract Enum randomiseReelChoice();
+/*
+Enum [] array = {};
+Random rand = new Random();
+int select = rand.nextInt(array.length);
+return array[select];
+}
+removed as now in child classes
+*/
 
     public void generateThreeWheels() {
         setReelOneChoice();
