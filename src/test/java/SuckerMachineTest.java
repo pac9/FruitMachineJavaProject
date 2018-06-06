@@ -26,6 +26,12 @@ public class SuckerMachineTest {
     }
 
     @Test
+    public void takeCashInFromPlayer(){
+        suckerMachine.getCashInFromPlayer(player.getCash());
+        assertEquals(10, suckerMachine.getCashIn());
+    }
+
+    @Test
     public void hasStake() {
         assertEquals(1, suckerMachine.getStake());
     }
@@ -68,11 +74,6 @@ public class SuckerMachineTest {
         assertEquals(0, suckerMachine.resultOfSpin());
         //this is on assumption that player loses. Need to find a better way to prove this test as
         //currently proving this via the debugger.
-    }
-
-    @Test
-    public void canGetCashInFromPlayer(){
-        assertEquals(10, suckerMachine.getCashInFromPlayer(player.getCash()));
     }
 
     @Test

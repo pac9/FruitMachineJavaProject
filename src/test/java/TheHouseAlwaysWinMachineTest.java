@@ -74,14 +74,14 @@ public class TheHouseAlwaysWinMachineTest {
     }
 
     @Test
-    public void canGetCashInFromPlayer(){
-        assertEquals(10, theHouseAlwaysWinMachine.getCashInFromPlayer(player.getCash()));
-    }
-
-    @Test
     public void hasRandomReelChoice(){
         Enum outcome = theHouseAlwaysWinMachine.randomiseReelChoice();
         assertNotNull(outcome);
+    }
+    @Test
+    public void takeCashInFromPlayer(){
+        theHouseAlwaysWinMachine.getCashInFromPlayer(player.getCash());
+        assertEquals(10, theHouseAlwaysWinMachine.getCashIn());
     }
 
 }

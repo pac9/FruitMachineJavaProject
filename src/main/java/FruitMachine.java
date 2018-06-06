@@ -59,9 +59,9 @@ public abstract class FruitMachine {
         return this.playerStake;
     }
 
-    public int getCashInFromPlayer(int cash) {
+    public void getCashInFromPlayer(int cash) {
         this.cashIn += cash;
-        return this.playerStake += cash;
+        this.playerStake += cash;
     }
 
     public int getStake() {

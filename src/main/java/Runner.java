@@ -16,16 +16,14 @@ public class Runner {
         if (gameSelection == ('H') || gameSelection == ('h')) {
             FruitMachine fruitMachine = new TheHouseAlwaysWinMachine("The House Always Wins");
             System.out.println("\n");
-
-        System.out.println("Welcome to " + fruitMachine.getName());
-
+            System.out.println("Welcome to " + fruitMachine.getName());
             System.out.println("---------------------------");
             System.out.println("* Match three identical   *");
             System.out.println("*   symbols to win £8     *");
             System.out.println("---------------------------");
             Player player = new Player(10);
-
-            System.out.println("Balance: £" + fruitMachine.getCashInFromPlayer(player.getCash()));
+            fruitMachine.getCashInFromPlayer(player.getCash());
+            System.out.println("Balance: £" + player.getCash());
             System.out.println("You have placed a £" + fruitMachine.getStake() + " bet, let's role the reels....");
 
             while (fruitMachine.getPlayerStake() > 0) {
@@ -58,7 +56,6 @@ public class Runner {
             }
             player.getWinningsFromMachine(fruitMachine.getPayout());
             System.out.println("Winnings transferred to your account: £" + player.getWinnings());
-
         }
         else if (gameSelection != ('H') || gameSelection == ('h')) {
             FruitMachine fruitMachine = new SuckerMachine("Suckers");
@@ -73,17 +70,16 @@ public class Runner {
 
 
             Player player = new Player(10);
+            fruitMachine.getCashInFromPlayer(player.getCash());
+            System.out.println("Balance: £" + player.getCash());
 
-            System.out.println("Balance: £" + fruitMachine.getCashInFromPlayer(player.getCash()));
             System.out.println("You have placed a £" + fruitMachine.getStake() + " bet, let's role the reels....");
 
             while (fruitMachine.getPlayerStake() > 0) {
                 char playAgain;
-//
                 fruitMachine.enoughCashToPlayGame();
                 fruitMachine.outOfFunds();
                 fruitMachine.generateThreeWheels();
-//        System.out.println("---------------------------");
                 System.out.println("\n");
                 System.out.println("Reel 1    " + "Reel 2    " + "Reel 3     ");
                 System.out.println(fruitMachine.setReelOneChoice() + " | " + fruitMachine.setReelTwoChoice() + " | " + fruitMachine.setReelThreeChoice());
@@ -110,8 +106,9 @@ public class Runner {
 
         }
 
+
     }
-}
 
-//        System.out.println("Balance in machine: £" + fruitMachine.getCashIn());
 
+
+                }

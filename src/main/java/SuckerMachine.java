@@ -15,6 +15,8 @@ public class SuckerMachine extends FruitMachine {
 
     public int resultOfSpin() {
         if (reelOneChoice.equals(reelTwoChoice) && reelTwoChoice.equals(reelThreeChoice)) {
+            //amounts hard coded in rather than putting a value against the enum as allows for extension
+            //whereby payout if two amounts match
             if (reelOneChoice == FruitType.CHERRIES) {
                 payout += 5;
                 System.out.println("You have won £5");
