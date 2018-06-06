@@ -2,9 +2,11 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public abstract class FruitMachine {
 
+    Scanner keyboard = new Scanner(System.in);
     protected int payout;
     protected Enum reelOneChoice;
     protected Enum reelTwoChoice;
@@ -101,8 +103,36 @@ removed as now in child classes
     }
 
 
+    public void playGame(FruitMachine fruitMachine) {
+        while (fruitMachine.getPlayerStake() > 0) {
+            char playAgain;
+            fruitMachine.enoughCashToPlayGame();
+            fruitMachine.outOfFunds();
+            fruitMachine.generateThreeWheels();
+            System.out.println("\n");
+            System.out.println("Reel 1    " + "Reel 2    " + "Reel 3     ");
+            System.out.println(fruitMachine.setReelOneChoice() + " | " + fruitMachine.setReelTwoChoice() + " | " + fruitMachine.setReelThreeChoice());
+            System.out.println("\n");
+            fruitMachine.randomiseReelChoice();
+            fruitMachine.resultOfSpin();
+            System.out.println("\n");
+            System.out.println("Balance remaining: £" + fruitMachine.getPlayerStake());
+            System.out.println("Winnings to date: £" + fruitMachine.getPayout());
+            System.out.println("\n");
+            System.out.println("Press 'Y' to play again, or any other button to exit");
+            String input = keyboard.next();
+            playAgain = input.charAt(0);
+            if (playAgain == ('Y') || playAgain == ('y')) {
+                continue;
+            } else if (playAgain != ('Y') || playAgain == ('y')) {
+                System.out.println("Thanks for playing!");
+                break;
+            }
 
+        }
     }
+}
+
 
 
 
