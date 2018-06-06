@@ -17,30 +17,15 @@ public class Player {
         return this.winnings;
     }
 
-//    public int decreaseCashWhenBetPlaced(){
-//        return this.cash - this.stake;
-//    }
 
     public int checkWinningsCanBeAddedToCash(){
         return this.cash + this.winnings;
     }
 
-//    public int getStake(){
-//        return this.stake;
-//    }
-
-//    public void enoughCashToPlayGame(FruitMachine fruitMachine){
-//        int stakeRequired = fruitMachine.getStake();
-//        if (this.cash >= stakeRequired){
-//            this.cash -= stakeRequired;
-//            fruitMachine.getCashInFromPlayer(stakeRequired);
-//        }
-//    }
     public void insertCashIntoFruitMachine(FruitMachine fruitMachine){
         fruitMachine.getCashInFromPlayer(this.cash);
 
     }
-
 
     public int getWinningsFromMachine(int payout) {
         return this.winnings += payout;

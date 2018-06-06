@@ -65,10 +65,7 @@ public abstract class FruitMachine {
         } else {
             System.out.println("Oh dear! You have lost");
             return getPayout();
-
-
         }
-
     }
 
     public int getCashIn() {
@@ -78,7 +75,6 @@ public abstract class FruitMachine {
     public int getPlayerStake() {
         return this.playerStake;
     }
-
 
     public int getCashInFromPlayer(int cash) {
         this.cashIn += cash;
@@ -101,7 +97,6 @@ public abstract class FruitMachine {
 //            fruitMachine.getCashInFromPlayer(stakeRequired);
         }
 //        System.out.println("You have insufficient funds to play this game");
-
 
     }
 

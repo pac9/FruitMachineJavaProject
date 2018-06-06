@@ -18,9 +18,11 @@ public class Runner {
             System.out.println("\n");
 
         System.out.println("Welcome to " + fruitMachine.getName());
-            System.out.println("\n");
 
-
+            System.out.println("---------------------------");
+            System.out.println("* Match three identical   *");
+            System.out.println("*   symbols to win £8     *");
+            System.out.println("---------------------------");
             Player player = new Player(10);
 
             System.out.println("Balance: £" + fruitMachine.getCashInFromPlayer(player.getCash()));
@@ -66,7 +68,11 @@ public class Runner {
             System.out.println("\n");
 
             System.out.println("Welcome to " + fruitMachine.getName());
-            System.out.println("\n");
+            System.out.println("---------------------------");
+            System.out.println("|   3 Cherries wins £5    |");
+            System.out.println("|   3 Lemons   wins £7    |");
+            System.out.println("|   3 Oranges  wins £6    |");
+            System.out.println("---------------------------");
 
 
             Player player = new Player(10);
