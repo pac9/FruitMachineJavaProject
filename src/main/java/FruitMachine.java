@@ -9,9 +9,10 @@ public abstract class FruitMachine {
     private int cashIn;
     private int stake;
     private int playerStake;
+    private String name;
 
 
-    public FruitMachine() {
+    public FruitMachine(String name) {
 
         this.cashIn = cashIn;
         this.stake = 1;
@@ -20,6 +21,7 @@ public abstract class FruitMachine {
         this.reelThreeChoice = reelThreeChoice;
         this.payout = payout; //or should this be 0 at initialisation
         this.playerStake = playerStake;
+        this.name = name;
     }
 
     public Enum randomiseReelChoice(){
@@ -115,6 +117,10 @@ public abstract class FruitMachine {
 
     public void transferWinningsToPlayer(Player player){
         player.getWinningsFromMachine(this.payout);
+    }
+
+    public String getName(){
+        return this.name;
     }
 }
 

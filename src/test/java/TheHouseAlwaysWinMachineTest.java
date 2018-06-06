@@ -10,12 +10,15 @@ public class TheHouseAlwaysWinMachineTest {
 
     @Before
     public void before(){
-        theHouseAlwaysWinMachine = new TheHouseAlwaysWinMachine("The House Always Wins");
+        fruitMachine = new TheHouseAlwaysWinMachine("The House Always Wins");
     }
 
     @Test
     public void hasName(){
-        assertEquals("The House Always Wins", theHouseAlwaysWinMachine.getName());
+        assertEquals("The House Always Wins", fruitMachine.getName());
     }
+
+
+
 
 }

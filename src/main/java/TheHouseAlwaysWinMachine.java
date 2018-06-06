@@ -2,21 +2,10 @@ import java.util.Random;
 
 public class TheHouseAlwaysWinMachine extends FruitMachine {
 
-    private String name;
-//    private CardType reelOneChoice;
-//    private CardType reelTwoChoice;
-//    private CardType reelThreeChoice;
-
     public TheHouseAlwaysWinMachine(String name) {
-        this.name = name;
+        super(name);
 
     }
-
-
-    public String getName() {
-        return name;
-    }
-
 
     public Enum randomiseReelChoice() {
         CardType[] array = {CardType.QUEEN, CardType.JACK, CardType.KING};
