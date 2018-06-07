@@ -9,6 +9,8 @@ public class Runner {
 
         Scanner keyboard = new Scanner(System.in);
         System.out.println("\n");
+        System.out.println("Welcome to the 'Gamblers Always Welcome' casino");
+        System.out.println("\n");
         System.out.println("Please select which machine you would like to play");
         System.out.println("Press H to play 'The House Always Wins' else select any other button to play 'Suckers'");
         String select = keyboard.next();
