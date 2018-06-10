@@ -27,17 +27,17 @@ public class Runner {
             System.out.println("*   symbols to win £8     *");
             System.out.println("---------------------------");
 
-            Player player = new Player(10);
+            Player player = new Player(5);
             fruitMachine.getCashInFromPlayer(player.getCash());
             System.out.println("Balance: £" + player.getCash());
-            System.out.println("You have placed a £" + fruitMachine.getStake() + " bet, let's role the reels....");
+            System.out.println("It's £" + fruitMachine.getStake() + " to play, let's role the reels....");
 
             fruitMachine.playGame(fruitMachine);
             player.getWinningsFromMachine(fruitMachine.getPayout());
             System.out.println("Winnings transferred to your account: £" + player.getWinnings());
 
         }
-        else if (gameSelection != ('H') || gameSelection == ('h')) {
+        else if (gameSelection != ('H') || gameSelection != ('h')) {
             FruitMachine fruitMachine = new SuckerMachine("Suckers");
 
             System.out.println("Welcome to " + fruitMachine.getName());
@@ -47,10 +47,10 @@ public class Runner {
             System.out.println("|   3 Lemons   wins £7    |");
             System.out.println("---------------------------");
 
-            Player player = new Player(10);
+            Player player = new Player(5);
             fruitMachine.getCashInFromPlayer(player.getCash());
             System.out.println("Balance: £" + player.getCash());
-            System.out.println("You have placed a £" + fruitMachine.getStake() + " bet, let's role the reels....");
+            System.out.println("It's £" + fruitMachine.getStake() + " to play, let's role the reels....");
 
             fruitMachine.playGame(fruitMachine);
             player.getWinningsFromMachine(fruitMachine.getPayout());

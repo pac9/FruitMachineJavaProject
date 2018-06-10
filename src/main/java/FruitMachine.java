@@ -75,6 +75,11 @@ removed as now in child classes
         this.playerStake += cash;
     }
 
+    public void transferWinningsToPlayer(Player player) {
+        player.getWinningsFromMachine(this.payout);
+    }
+
+
     public int getStake() {
         return this.stake;
     }
@@ -95,9 +100,6 @@ removed as now in child classes
         }
     }
 
-    public void transferWinningsToPlayer(Player player) {
-        player.getWinningsFromMachine(this.payout);
-    }
 
     public String getName() {
         return this.name;

@@ -9,6 +9,8 @@ public class PlayerTest {
 
     TheHouseAlwaysWinMachine theHouseAlwaysWinMachine;
 
+    FruitMachine fruitMachine;
+
     @Before
     public void before(){
         player = new Player(10);
