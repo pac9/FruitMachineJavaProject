@@ -1,6 +1,7 @@
 # FruitMachineJavaProject
 
 Project brief issued by CodeClan
+Solo Project
 
 Goal: Create a fruit machine in Java.
 
